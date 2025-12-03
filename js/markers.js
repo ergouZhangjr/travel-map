@@ -43,7 +43,7 @@ function addAnimationStyles() {
 // 2.1徒步点
 function createMarker1(map, lnglat, title, contentInfo, imgUrl, linkUrl, season) {
     var hikingIcon = new AMap.Icon({
-        image: 'images/peak.png',      // 图标图片URL
+        image: 'pictures/images/peak.png',      // 图标图片URL
         imageSize: new AMap.Size(64, 64),  // 图标尺寸
         imageOffset: new AMap.Pixel(0, 0)  // 图片偏移量
     })
@@ -401,4 +401,5 @@ allMarkers.push(m4);
 window.onload = function() {
     createSeasonFilterButtons();
     addAnimationStyles(); // 添加CSS样式
+
 };
