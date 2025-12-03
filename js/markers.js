@@ -42,15 +42,11 @@ function addAnimationStyles() {
 // 2.创建点标记函数
 // 2.1徒步点
 function createMarker1(map, lnglat, title, contentInfo, imgUrl, linkUrl, season) {
-    var hikingIcon = new AMap.Icon({
-        image: 'pictures/images/peak.png',      // 图标图片URL
-        imageSize: new AMap.Size(64, 64),  // 图标尺寸
-        imageOffset: new AMap.Pixel(0, 0)  // 图片偏移量
-    })
-    var marker = new AMap.Marker({
+    
+   var marker = new AMap.Marker({
         map: map,
         position: lnglat,
-        icon: hikingIcon,  // 使用自定义图标
+        content: '<div style="background-image: url(\'pictures/images/peak.png\'); background-size: contain; width: 64px; height: 64px;"></div>',
         offset: new AMap.Pixel(-32, -32)
     });
 
@@ -403,3 +399,4 @@ window.onload = function() {
     addAnimationStyles(); // 添加CSS样式
 
 };
+
