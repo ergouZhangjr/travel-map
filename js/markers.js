@@ -45,7 +45,7 @@ function createMarker1(map, lnglat, title, contentInfo, imgUrl, linkUrl, season)
     var marker = new AMap.Marker({
         map: map,
         position: lnglat,
-        content: '<div style="background-image: url(\'../Images/peak.png\'); background-size: contain; width: 64px; height: 64px;"></div>',
+        content: '<div style="background-image: url(\'Images/peak.png\'); background-size: contain; width: 64px; height: 64px;"></div>',
         offset: new AMap.Pixel(-32, -32)
     });
 
@@ -396,4 +396,5 @@ allMarkers.push(m4);
 window.onload = function() {
     createSeasonFilterButtons();
     addAnimationStyles(); // 添加CSS样式
+
 };
