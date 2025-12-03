@@ -24,7 +24,7 @@ function createMapLegend() {
     
     // 徒步点图例（山峰图片）
     var hikingItem = createLegendItem(
-        'images/peak_icon.png',
+        './images/peak_icon.png',
         '徒步点',
         '24px'
     );
@@ -321,3 +321,4 @@ if (typeof map !== 'undefined') {
     document.addEventListener('AMapLoaded', initLegend);
 
 }
+
