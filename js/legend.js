@@ -24,7 +24,7 @@ function createMapLegend() {
     
     // 徒步点图例（山峰图片）
     var hikingItem = createLegendItem(
-        './Images/peak_icon.png',
+        'images/peak_icon.png',
         '徒步点',
         '24px'
     );
@@ -319,4 +319,5 @@ if (typeof map !== 'undefined') {
 } else {
     // 监听地图创建
     document.addEventListener('AMapLoaded', initLegend);
+
 }
