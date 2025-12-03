@@ -42,7 +42,7 @@ function addAnimationStyles() {
 // 2.创建点标记函数
 // 2.1徒步点
 function createMarker1(map, lnglat, title, contentInfo, imgUrl, linkUrl, season) {
-    
+    console.log('createMarker1 called', title);
    var marker = new AMap.Marker({
         map: map,
         position: lnglat,
@@ -398,6 +398,7 @@ window.onload = function() {
     addAnimationStyles(); // 添加CSS样式
 
 };
+
 
 
 
