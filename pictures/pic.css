@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 鼠标宠物 */
+
+.img {
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    pointer-events: none;
+    background-image: url('./goat.gif');
+    background-size: cover;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* 主色调 */
+    line-height: 1.6;
+    color: #333; /* 文字颜色 */
+}
+h1, .gallery img {
+    color: #0056b3; /* 强调色 */
+}
+header {
+    background-color: #e0eaf4; /* 辅助色 */
+}
+#title{
+    font-size: 80px;
+    letter-spacing: 30px; /* 增加字间距 */
+}
+header {
+    height: 180px;
+    color: #120f0f;
+    text-align: center;
+    padding: 1rem;
+}
+#headtitle{
+    height:100%;
+    width: 15%;
+    float:left;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 0 15px 15px 0;
+    box-shadow: 3px 0 10px rgba(0,0,0,0.1);
+    padding: 10px 5px;
+    box-sizing: border-box;
+}
+
+#ergou{
+    font-size: 32px; /* 增大字号 */
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 3px; /* 增加字间距 */
+    margin-bottom: 8px; /* 调整间距 */
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+#lvxingriji{
+    font-size: 18px; /* 增大字号 */
+    color: #f8f9fa;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    letter-spacing: 2px; /* 增加字间距 */
+    font-family: 'SimSun', serif;
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    line-height: 1.2;
+    font-weight: 600; /* 增加字重 */
+    margin-top: 5px; /* 调整间距 */
+}
+.headcenter {
+    width:28%;
+    float:left;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    height: 100%;
+
+  }
+
+#headleft{
+    height:100%;
+    width: 20%;
+    float:left;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    position: relative; /* 添加相对定位，作为轮播图的参考 */
+    margin: 0 10px; /* 左右边距 */
+}
+
+.headright{
+    height:100%;
+    width: 35%;
+    float:left;
+  
+}
+/* 介绍样式 */
+.city-intro {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 8px 2px 8px 2px; /* 上右下左，左边距2px */
+    border-radius: 8px;
+    margin: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #2b8cbe;
+    text-align: left;
+    width: 100%; /* 占满headright宽度 */
+    height: 100%; /* 占满headright高度 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 自动调整行距占满高度 */
+    box-sizing: border-box;
+}
+
+.city-intro p {
+    margin: 4px 0; /* 段落间距 */
+    line-height: 1.4; /* 适当的行高 */
+    color: #333;
+    font-size: 14px;
+    text-align: left;
+    flex: 1; /* 自动填充可用空间 */
+    display: flex;
+    align-items: center; /* 垂直居中 */
+}
+
+.city-intro .highlight {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-right: 4px; /* 高亮文字右边距 */
+}
+
+/* 确保headright2容器正确设置 */
+.headright2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch; /* 拉伸子元素高度 */
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 50%;
+    float: left;
+}
+/* 标题样式 */
+.left {
+    width: 24%;
+    float: left;
+    padding: 10px; /* 给.left加一些内边距 */
+    box-sizing: border-box; /* 确保padding不会影响宽度 */
+}
+
+/* 标题样式 */
+#youji_title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    padding: 10px 15px; /* 调整内边距 */
+    background-color: #eaf4e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    display: inline-block; /* 让背景只包裹文字 */
+    margin: 20px auto; /* 上下留有空隙，水平居中 */
+    line-height: 1.4; /* 调整行高以适应新的内边距 */
+}
+/* 新增样式以确保.left内的#youji_title可以正确居中 */
+.left {
+    text-align: center; /* 确保内容在其父级容器内居中 */
+}
+.left > #youji_title {
+    display: inline-block; /* 确保该元素能够响应父级的text-align:center */
+}
+/* 内容样式 */
+#youji_content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+    text-align: left; /* 确保文本左对齐 */
+    text-indent: 2em; /* 首行缩进两个字符宽度 */
+}
+
+.right {
+    width: 24%;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center; /* 确保子元素如标题能居中 */
+}
+/* 攻略标题样式 */
+#gonglue_title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    padding: 10px 15px;
+    background-color: #eaf4e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* 让背景只包裹文字 */
+    margin: 20px auto; /* 上下留空，水平居中 */
+    line-height: 1.4;
+}
+
+/* 攻略内容样式 */
+#gonglue_content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 20px; /* 左右留空 */
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+    text-align: left; /* 左对齐 */
+    text-indent: 2em; /* 首行缩进两个字符 */
+}
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+footer {
+    text-align: center;
+    padding: 0.3rem 0; /* 再次减少上下内边距，使高度进一步缩小 */
+    background: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 9px; /* 字体大小减半 */
+    line-height: 1.2;
+}
+/* 基于原始CSS文件进行响应式设计 */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* 减小字体大小 */
+    }
+
+    header {
+        height: auto;
+        padding: 0.5rem;
+    }
+    
+    .headcenter, #headleft, .headright {
+        float: none;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    
+    #headleft img {
+        position: relative;
+        top: auto;
+        left: auto;
+        height: auto;
+    }
+
+    .gallery {
+        width: 100%; /* 使画廊占据全宽 */
+        justify-content: center;
+    }
+
+    .left, .right {
+        width: 100%; /* 全宽显示 */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    footer {
+        font-size: 8px; /* 进一步缩小字体大小 */
+        padding: 0.2rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, .gallery img {
+        color: #0056b3;
+        font-size: 1.2em; /* 调整标题和图片说明文字大小 */
+    }
+
+    .gallery img {
+        width: 100%; /* 确保图片在非常小的设备上也能良好显示 */
+    }
+}
+
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
